@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <!--w3-->
+   <style>
+   <!--gellary eke css-->
+   body
+{
+  background-color:#eee
+}
+.wrap
+{
+  margin:50px auto 0 auto;
+  width:100%;
+  display:flex;
+  align-items:space-around;
+  max-width:1200px;
+}
+.tile
+{
+  width:380px;
+  height:380px;
+  margin:10px;
+  background-color:#99aeff;
+  display:inline-block;
+  background-size:cover;
+  position:relative;
+  cursor:pointer;
+  transition: all 0.4s ease-out;
+  box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+  overflow:hidden;
+  color:white;
+  font-family:'Roboto';
+  
+}
+.tile img
+{
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:0;
+  transition: all 0.4s ease-out;
+}
+.tile .text
+{
+/*   z-index:99; */
+  position:absolute;
+  padding:30px;
+  height:calc(100% - 60px);
+}
+.tile h1
+{
+ 
+  font-weight:300;
+  margin:0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.tile h2
+{
+  font-weight:100;
+  margin:20px 0 0 0;
+  font-style:italic;
+   transform: translateX(200px);
+}
+.tile p
+{
+  font-weight:300;
+  margin:20px 0 0 0;
+  line-height: 25px;
+/*   opacity:0; */
+  transform: translateX(-200px);
+  transition-delay: 0.2s;
+}
+.animate-text
+{
+  opacity:0;
+  transition: all 0.6s ease-in-out;
+}
+.tile:hover
+{
+/*   background-color:#99aeff; */
+box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+  transform:scale(1.05);
+}
+.tile:hover img
+{
+  opacity: 0.2;
+}
+.tile:hover .animate-text
+{
+  transform:translateX(0);
+  opacity:1;
+}
+.dots
+{
+  position:absolute;
+  bottom:20px;
+  right:30px;
+  margin: 0 auto;
+  width:30px;
+  height:30px;
+  color:currentColor;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  
+}
+
+.dots span
+{
+    width: 5px;
+    height:5px;
+    background-color: currentColor;
+    border-radius: 50%;
+    display:block;
+  opacity:0;
+  transition: transform 0.4s ease-out, opacity 0.5s ease;
+  transform: translateY(30px);
+ 
+}
+
+.tile:hover span
+{
+  opacity:1;
+  transform:translateY(0px);
+}
+
+.dots span:nth-child(1)
+{
+   transition-delay: 0.05s;
+}
+.dots span:nth-child(2)
+{
+   transition-delay: 0.1s;
+}
+.dots span:nth-child(3)
+{
+   transition-delay: 0.15s;
+}
+
+
+@media (max-width: 1000px) {
+  .wrap {
+   flex-direction: column;
+    width:400px;
+  }
+}
+   
+   
+  <!--parana--> 
+div.gallery {
+  margin:15px;
+  border: 5px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 5px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+   
+   <!--w3-->
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>E Traveling</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="Homepage.html"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="Homepage.html">Home</a>
+                  </li>
+                  <li class="">
+                     <a class="nav-link" href="Map.html">Map</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="food&drink.html">food drinks</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="activities.html">Activities</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contactInformation.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="main">
+               <form class="form-inline my-2 my-lg-0">
+                  <div class="call_text">
+                     <ul>
+                        <li><a href="#"><img src="images/call-icon.png"><span class="padding_left_10">+94768322692</span></a></li>
+                        <li><a href="#"><img src="images/mail-icon.png"><span class="padding_left_10">etraveling@gmail.com</span></a></li>
+                        
+                     </ul>
+                  </div>
+               </form>
+            </div>
+         </nav> 
+         <!-- title selec karana code-->
+         <div class="banner_section layout_padding">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <h1 class="banner_taital"><font color="black" >E-Travaling</font></h1>
+                        <h1 class="banner_taital_1"><font color="red" >Sri lanka</font></h1>
+                        <h4 class="banner_text">Travel to your Favaurite Place</h4>
+                        
+                     </div>
+                  </div>
+                  
+            <div id="navbar" class="menu_main">
+               <div class="menu_right">
+                  <div class="costum_menu">
+                     <ul>
+                        <li class="active"><a href="Homepage.html">Home</a></li>
+                        <li><a href="Map.html">Map</a></li>
+                        <li><a href="activities.html">Activites</a></li>
+                        <li><a href="food&drink.html">food & drinks</a></li>
+                        <li><a href="contactInformation.html">Contact Us</a></li>
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!--about eka patan gannawa -->
+      <div>
+         <div>
+            <div>
+               <div>
+                  <div class="tree_icon"><img src="images/logo.png" width="100"></div>
+                  <h1><font color="red">ABOUT........</font></h1><br>
+                  <!--<p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons</p>-->
+                               <img src="images/map-beach-destinations-sri-lanka.png"  align="right"alt="Beaches of Sri Lanka" />
+				 
+            
+            <h2><center><font color="blue">Beaches of Sri Lanka</font></center></h2>
+            <p align="justify">Sri Lanka has almost thirteen hundred kilometers of picture postcard style wide sandy beaches – where in one place the beach forms sheltered little cove, a sandy beach headland or a little bay, of all shapes sizes and colours. The more popular beaches are in the southwest of Sri Lanka, though little crowded, boast of two of the best snorkeling beaches, while other beaches in the deep South and east are waiting for you to revel in their remoteness, serenity and unspoilt beauty, and are ideal for a refreshing day in the sun.</p>
+            <p>In Sri Lanka beaches are ideal places for families and friends to meet and usually head to the beach on holidays, weekends, if only to gaze out at the sea. The natural noise of crashing waves, where you can walk leisurely along the beach at sunset, enjoy a game of cricket on the beach, laze in the sun or cast a rod and fish for night’s dinner. Whether it’s a lazy snorkel in crystal clear water or dive on a nearby reef, swim with a pod of friendly spinner dolphins in Kalpitiya, watch blue whales or dive onto a coral reef teaming with tropical fish marvelling at the explosion of colours hidden beneath the sea, or enjoy a once-in-a-lifetime experience with gentle but massive blue whale off the coast of Mirissa or cavort with friendly dolphins off Dondra head, Sri Lanka has it all.</p>
+            <p>Fishing is the widespread occupation of most folk living along the coastal belt of Sri Lanka thus many fishing villages are abound, also the use many different ways to catch fish. Most note worthy of mentioning is “stilt fishing” technique found in the southern coastal areas. The deep south and eastern coastal areas are still under developed as far as tourism is concerned, but has the best sceneries’ and also the best places to enjoy an authentic village lifestyle, in Sri Lanka. Once the sun dips over the horizon a whole new nocturnal world opens up for the visitor with the rhythmic moan of the Loris, the long continuous note of the cicada bringing a primeval ambience to life. Ideal time to walk along the beach to watch fisherman either returning with the days catch, or leaving on their daily work, or watch turtles beaching to lay eggs, four types of turtles frequent Sri Lankan waters, the turtles are protected by law in Sri Lanka and possessing items made from turtle carapace carries penalties, but you could support various turtle conservation projects or simply watch turtle in their natural habitat, or even get involved in releasing young ones to see and watch their mad scramble towards the breaking waves.</p>
+		  
+    <!--abot eka iwarai-->
+	<br>
+	<center><h1><font color="red">Popular Beach Holiday Destinations in Sri Lanka</font></h1></center>
+	
+	
+	<!--new galary eka-->
+	
+<div class="wrap">
+		<div class="tile"> 
+			<img src="images/09.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Negombo Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">Negombo, Situated six kilometres, a mere stones throwaway from the International airport of Sri Lanka, is a characteristic predominantly Christian fishing town with narrow streets and small boutiques and many a historic churches to visit and see, with its routes running back to the arrival of the Portuguese.</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/10.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Nilaveli Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">Is a stretch of beach  which is situated approximately 16 kilometres North of Trincomalle, passing a thriving  lagoon on either side and lush coconut palm groves and hordes of cattle, note  that the people in the area are predominantly Hindu and consider the cows  sacred. Arriving at the hamlet</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/11.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Passikuda Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">Pasikuda, meaning &ldquo;green-algae-bay&rdquo;  is situated in Eastern seaboard of Sri Lanka between Kalkuda and the Indian  Ocean, approximately 35 kilometers from Batticaloa Town. The turquoise blue  waters of the bay attracts local and foreign tourist to this wide sandy place  under the hot tropical...</p>
+			</div>
+		</div>
+</div>
+
+<div class="wrap">
+
+		<div class="tile"> 
+			<img src="images/12.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Ranna  Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">A sleepy off the  track hamlet, famous as a secluded beach and ideal as a honeymooner&rsquo;s getaway  with strolls down almost six kilometres of beach hand in hand, famous for  turtle landings, it is known that adjoining Rekawa beach is frequented by four  of the six known types of turtles in the world.</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/13.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Tangalle  Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">he resort township  of Tangalle, lying in the Deep South with nothing between it and Antarctica has  some of the most beautiful un-crowded beaches in the island from Pallikkudawa  to the famous pigeon bay with a small rocky islet off to a side to which one  could walk over, where on one side...</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/14.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Trincomalee  Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">One of the finest natural deepwater harbours in the world, located in the eastern seaboard of Sri Lanka approximately 245km from Colombo. There is an account of “Gokanna”, as it was known during the Anuradhapura and Polonnaruwa period, attracting great sea fares in the calibre Marco Polo and Ptolemy...</p>
+			</div>
+		</div>
+</div>
+
+<div class="wrap">
+		<div class="tile"> 
+			<img src="images/05.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Induruwa Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">Nestled along a small  ravine in the west coast, was once a sleepy fishing village  today however it has turned into a major  hotspot for tourists looking for white sandy beaches with perfect surf to relax  in.</p>
+			</div>
+		</div>
+
+		
+		<div class="tile"> 
+			<img src="images/06.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Kalpitiya Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">The Sinhalese chronicle Mahavamsa states that  prince Vijaya landed in a place not too far from the present day Kalpitiya. A  sandy headland which keeps the Kalpitiya lagoon sheltered from the Indian Ocean,  the blue water with a calm surface beacons the kite surfers to try the breeze..p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/07.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Kalutara Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">The city gets its  name from the &ldquo;Kaluganga&rdquo; river which flows past famous &ldquo;Gangathilake&rdquo; Temple with  a hollow &ldquo;stupa&rdquo; and adored inside with many paintings, sits on the former  location of the Kalutara British fort. First mentioned in the 11th  century</p>
+			</div>
+		</div>
+</div>
+<div class="wrap">
+		<div class="tile"> 
+			<img src="images/08.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Mirissa Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">The BBC documentary titled &ldquo;Ocean Giants&rdquo;  featuring the mesmeric world of Whales and Dolphins, and the scientist&rsquo;s effort  to shed light on their habits and why they grow so large were filmed around Mirissa  Sri Lanka and according to them 30 Blue Whales were sighted in a single day!</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/02.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Galle Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">he first references  of Galle port comes during King Solomons times which is believed to be &ldquo;Tarish&rdquo;  in the Bible, and cinnamon has been the main export of Sri Lanka starting  around 1400 years BC. Southern port of call for many ancient silk route bound  ships, the Galle harbour or then known as ..</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/17.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Talalla Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">Squirreled away down muddy dirt tracks, this is one of those near-pristine beaches that really does define all the tropical-beach postcard clichés. This 1km-long curve of sand is mostly unspoiled by tourism development.</p>
+			</div>
+		</div>
+</div>
+<div class="wrap">
+		<div class="tile"> 
+			<img src="images/04.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Hikkaduwa Beach (Best for Surfing)</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">In 1940, the Hikkaduwa Rocky Islets were declared sanctuaries and was limited to the land boundaries of these rocky islets. In 1998 it was upgraded to the status of a nature reserve and later to a national park. The famed...</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/16.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Weligama   Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">The Chronicles gives  an interesting account of &ldquo;Mahavalukagama&rdquo; meaning big sandy city, today known  as Weligama, where King Parakramabahu I sent his general, Rakkha to suppress  the southern province, and the city has always been a port city with its half  moon bay where many a ship anchored from time immoral.</p>
+			</div>
+		</div>
+		
+		<div class="tile"> 
+			<img src="images/01.jpg">
+			<div class="text">
+				<h1><font color="white"><b>Arugambay Beach</b></font></h1>
+				<h2 class="animate-text">Description</h2>
+				<p class="animate-text">Hailed as one of the  best surfing destinations in the world, many events are held each year under  the patronage of Sri Lanka Tourism Authority to promote this beach, the ones to  watch are regional championships held each year in May – June.  Arugambay is located on southeast corner...</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>	
+<!--new galary eka-->
+
+      
+      <div class="gifts_section layout_padding">
+         <div class="container">
+            <div class="tree_icon_1"><img src="images/logo.png" width="100"></div>
+            <h1 class="gifts_taital">E Traveling Sri Lanka</h1>   
+         </div>
+		 <!--
+         <div class="gifts_section_2 layout_padding">
+            <div class="owl-carousel owl-theme">
+               <div class="item"><img src="images/03.jpg" alt="#" /></div>
+               <div class="item"><img src="images/04.jpg" alt="#" /></div>
+               <div class="item"><img src="images/06.jpg" alt="#" /></div>
+               <div class="item"><img src="images/02.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/05.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/01.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/07.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/08.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/09.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/10.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/11.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/12.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/13.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/14.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/15.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/16.jpg" alt="#" /></div>
+			   <div class="item"><img src="images/17.jpg" alt="#" /></div>
+            </div>
+         </div>
+      </div>
+
+   
+     
+      
+      </div>-->
+      
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         if ( $(window).width() > 990) { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 350,
+             loop:true,
+             margin:35,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+          }
+         
+         
+         
+          else { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 70,
+             loop:true,
+             margin:10,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+           }
+         
+                 
+               
+      </script>
+      <script type="text/javascript">
+         $(window).scroll(function(){
+         var sticky = $('#navbar'),
+         scroll = $(window).scrollTop();
+         
+         if (scroll >= 600) sticky.addClass('fix-nav');
+         else sticky.removeClass('fix-nav');
+         });
+      </script>
+   </body>
+</html>

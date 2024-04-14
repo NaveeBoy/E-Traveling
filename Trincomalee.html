@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Trincomalee</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section header_bg">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="Homepage.html"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="Homepage.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="Map.html">MAP</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="nav-link" href="activities.html">ACTIVITES</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="food&drink.html">FOOD & DRINKS</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contactInformation.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="main">
+               <form class="form-inline my-2 my-lg-0">
+                  <div class="call_text">
+                     <ul>
+                        <li><a href="#"><img src="images/call-icon.png"><span class="padding_left_10">+94768322692</span></a></li>
+                        <li><a href="#"><img src="images/mail-icon.png"><span class="padding_left_10">etraveling@gmail.com</span></a></li>
+                        
+                     </ul>
+                  </div>
+               </form>
+            </div>
+         </nav>
+      </div>
+	  <div id="navbar" class="menu_main">
+               <div class="menu_right">
+                  <div class="costum_menu">
+                     <ul>
+                        <li><a href="Negombo.html">Negombo</a></li>
+                        <li><a href="Mirissa.html">Mirissa</a></li>
+                        <li class="active"><a href="Trincomalee.html">Trincomalee</a></li>
+                        <li><a href="Gall.html">Galle</a></li>
+                        <li><a href="Benthota.html">Benthota</a></li>
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div>
+			<!--<div id="navbar" class="menu_main">
+               <div class="menu_right">
+                  <div class="costum_menu">
+                     <ul>
+                        <li class="active" ><a href="Mirissa.html">Activity 01 </a></li>
+                        <li ><a href="">Activity 02</a></li>
+                        
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div><br>--><hr>
+			
+			<!--gallery slider eka-->
+	  <center><h1>Trincomalee Sightseeing Tour</h1></center>
+	  
+<div id="slider">  
+<div class="slides">  
+  <img src="images/trincomalee/01.jpg" width="100%"/>
+ </div>
+  
+  <div class="slides">  
+  <img  src="images/trincomalee/02.jpg" width="100%" />
+</div>
+  
+  <div class="slides">  
+  <img src="images/trincomalee/03.jpg" width="100%" />
+</div> 
+  
+   <div class="slides">  
+  <img src="images/trincomalee/04.jpg" width="100%" />
+</div> 
+  
+<div class="slides">  
+  <img src="images/trincomalee/05.jpg" width="100%" />
+</div>  
+
+  
+  <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+ </div>
+	  
+	  <script type="text/javascript">
+	  
+	  var index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+  if(index<0){
+    index = slides.length-1;
+  }
+  
+  if(index>slides.length-1){
+    index = 0;
+  }
+  
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display = "none";
+    dot[i].classList.remove("active");
+  }
+  
+  slides[index].style.display= "block";
+  dot[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,2000);
+  
+}
+
+changeSlide();
+	  
+	  </script>
+	  
+	  
+	 <!--gallery slider eka-->
+	 <hr>
+	 <p>Spend the day exploring thethe ancient harbor city of Trincomalee on the beautiful Eastern Coast of Sri Lanka. Explore nature, ancient architecture, and religious monuments with an English-speaking guide.</p>
+	  <hr><center>
+	  <h1><font color="red">Activity provider:</font><a href="https://www.getyourguide.com/lakpura-llc-s28704/">
+Lakpura LLC</a></h1><hr><br><br>
+
+	<h1>About this activity</h1>	<br>
+	<dl>
+		<dt><img src="images/negombo/icon01.png" width="50" height="50">Free cancellation</dt>
+			<dd>Cancel up to 24 hours in advance to receive a full refund</dd><br>
+		<dt><img src="images/negombo/icon02.png" width="50" height="50">Reserve now & pay later</dt>
+			<dd>Keep your travel plans flexible — book your spot and pay nothing today.</dd><br>
+		<dt><img src="images/negombo/icon03.png" width="100" height="100">Covid-19 precautions</dt>
+			<dd>Special health and safety measures are in place. Check your activity voucher once you book for full details.</dd><br>
+		<dt><img src="images/negombo/icon04.png" width="60" height="60">Duration 12 hours</dt>
+			<dd>Check availability to see starting times.</dd><br>
+		<dt><img src="images/negombo/icon8.png" width="50" height="50">Pickup included</dt>
+			<dd>Hotel pickup within Trincomalee hotels.</dd><br>
+		<dt><img src="images/negombo/icon06.png" width="100" height="100">Live tour guide</dt>
+			<dd>English</dd><br>
+		<dt><img src="images/negombo/icon07.png" width="50" height="50">Private group</dt>
+			<dd></dd><br>
+	</dl>
+		</center>
+		<hr><hr>
+		<center>
+		
+			<h2><font size="10" color="red">Highlights</h2>
+			
+		<p align="left"><font size="4" color="black">
+					◄See the flocks of pigeons and other animals on Pigeon Island<br>
+					◄Feel the waters in the Kinniya hot wells<br>
+					◄Visit Thirukoneswaram Temple and admire its mix of ancient and modern architecture<br>
+					◄See Fort Frederick, built by the Portuguese using stones from Thirukoneswaram Temple<br>
+				</font></p>
+				
+	<h2><font size="10" color="red">Full description</h2>
+			
+		<p align="justify"><font size="4" color="black">
+					Take a full day trip from Dambulla to visit the area of Trincomalee, a port city on the east coast of Sri Lanka. Immerse yourself in the nature and ancient religious architecture of the area with an English-speaking guide.  
+
+You’ll be picked up from your hotel in Dambulla at around 7:00 AM for the 1.5-hour drive to reach Trincomalee. Your first destination will be the beautiful islet off the coast, Pigeon Island. This has been the nesting ground for local rock pigeons for centuries.
+
+Continue on to the hot wells of Kinniya. Learn about the legends behind these protected archaeological monuments and feel their different temperatures. Then, admire the ruins of the old Shiva Temple nearby that was destroyed during the recent civil wars.  
+
+After the hot wells, you’ll visit Thirukoneswaram Temple, which may be as old as 5,000 years. View its fascinating architecture, both ancient and more modern, due to it being rebuilt in part during the Portuguese era. Follow the rock path to a secret cave where you can see the primitive and ancient shrine where the temple was born.  
+
+After lunch at your own expense in a local eatery and a relaxing break, restart the tour at 2:00 PM. Visit Fort Frederick, constructed by the Portuguese using stones from the original Koneswaram Temple that they destroyed. To this day, parts of the fort bear markings from the original temple walls.  
+
+Your final destination is Marble Beach, known for its smooth white sands and clear waters. Sunbathe and relax until 5:30 PM, at which point you’ll head back to Dambulla for approximately 7:00 PM.</font></p>
+<h2><font size="10" color="red">Includes</h2>
+			
+		<p align="justify"><font size="4" color="black">
+					◄Transportation<br>
+					◄Entrance fees<br>
+					◄English-speaking chauffeur/guide<br>
+					◄1 liter of bottled mineral water per person<br>
+					◄Hotel pickup and drop-off<br>
+					◄All taxes and service charges<br></font></p>
+					
+<h2><font size="10" color="red">Not suitable for</h2>
+			
+		<p align="justify"><font size="4" color="black">
+					◄Wheelchair users<br>
+					</font></p>
+					</center>
+<hr><hr>
+<center><h2><font size="10" color="red">Important information</h2></center>
+			
+		<p align="justify"><font size="4" color="black">
+		<dl>
+					<dt>What to bring,</dt>
+							<dd>◄Passport or ID card</dd>
+							<dd>◄Comfortable shoes</dd>
+							<dd>◄Sunglasses</dd>
+							<dd>◄Sun hat</dd>
+							<dd>◄Sunscreen</dd>
+							<dd>◄Food</dd>
+		</dl>
+							<hr>
+				<dl>
+					<dt>Not allowed,</dt>
+							<dd>◄Pets</dd>
+				</dl><hr>
+				<dl>
+					<dt>Know before you go,</dt>
+							<dd>◄It is recommended to bring a packed breakfast for the morning drive.</dd>
+				</dl>
+							</font></p>
+
+	
+	<center><font color="red" size="4" >Go For More Details →<a href="https://www.getyourguide.com/lakpura-llc-s28704/">Lakpura LLC</a>
+			</font></center>
+	
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+	  
+	  
+	  
+      <!-- footer section start -->
+      <div class="footer_section layout_padding padding_top_90">
+         <div class="container">
+            <div class="social_icon">
+               <ul>
+                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+               </ul>
+            </div>
+         </div>
+         
+      </div>
+      <!-- footer section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         if ( $(window).width() > 990) { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 350,
+             loop:true,
+             margin:35,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+          }
+         
+         
+         
+          else { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 70,
+             loop:true,
+             margin:10,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+           }    
+         
+      </script>
+      <script type="text/javascript">
+         $(window).scroll(function(){
+         var sticky = $('#navbar'),
+         scroll = $(window).scrollTop();
+         
+         if (scroll >= 600) sticky.addClass('fix-nav');
+         else sticky.removeClass('fix-nav');
+         });
+      </script>
+      <!-- header section start -->
+      <!-- footer section start --
+      <div class="footer_section layout_padding padding_top_90">
+         <div class="container">
+            
+            
+            
+               
+                  
+                  
+                      
+                        
+                            
+                          
+                        
+                              
+                           
+                     
+               
+                  <div class="col-lg-8 col-sm-12">
+                     <div class="map_main">
+                        <div class="map-responsive">
+                          
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			<!--
+            <div class="social_icon">
+               <ul>
+                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+               </ul>
+            </div>
+         </div>
+         
+      </div>
+      <!-- footer section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         if ( $(window).width() > 990) { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 350,
+             loop:true,
+             margin:35,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+          }
+         
+         
+         
+          else { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 70,
+             loop:true,
+             margin:10,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+           }    
+         
+      </script>
+      <script type="text/javascript">
+         $(window).scroll(function(){
+         var sticky = $('#navbar'),
+         scroll = $(window).scrollTop();
+         
+         if (scroll >= 600) sticky.addClass('fix-nav');
+         else sticky.removeClass('fix-nav');
+         });
+      </script>
+   </body>
+</html>

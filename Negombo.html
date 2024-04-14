@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   
+   <!---slider eke css-->
+   <style>
+   <!--dl-->
+   dl:after {content:"";display:table;clear:both;}
+.dd {
+    padding:.5em 0;
+}
+.dl {
+    width:100%;
+}
+.dt, dd {
+    display:inline-block;
+    width:30%;
+}
+.dt {
+    text-align:right;
+    font-weight:bold;
+    clear:left;
+    float:left;
+}
+.dd {
+    width:70%;
+    padding-left:1em;
+    clear:right;
+}
+.dd + dd {
+    float:right;
+    clear:both;
+}
+.dt:first-child {
+    padding-top:.5em;
+}
+.dd + dt {
+   clear:both;
+    padding-top:.5em;
+}
+.dt + dt {
+    width: 100%;
+    float: none;
+    padding: 0 70% 0 0;
+}
+.dt + dt + dd {
+    margin-top: -2em;
+}
+.dt + dt + dd + dt {
+    margin-top: 2em;
+}
+   
+   <!--dl-->
+   *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes fade{
+  from{
+    opacity:0.4;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+
+
+#slider{
+  margin:0 auto;
+  width:80%;
+  overflow:hidden;
+}
+
+.slides{
+  overflow:hidden;
+  animation-name:fade;
+  animation-duration:1s;
+  display:none;
+}
+
+@media (max-width:567px){
+  #slider{
+    width:100%;
+
+  }
+}
+
+
+
+
+   
+   </style>
+   
+   
+   
+   <!---slider eke css->
+   
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Negombo01</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section header_bg">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="Homepage.html"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="Homepage.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="Map.html">MAP</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="nav-link" href="activities.html">ACTIVITES</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="food&drink.html">FOOD & DRINKS</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contactInformation.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="main">
+               <form class="form-inline my-2 my-lg-0">
+                  <div class="call_text">
+                     <ul>
+                        <li><a href="#"><img src="images/call-icon.png"><span class="padding_left_10">+94768322692</span></a></li>
+                        <li><a href="#"><img src="images/mail-icon.png"><span class="padding_left_10">etraveling@gmail.com</span></a></li>
+                        
+                     </ul>
+                  </div>
+               </form>
+            </div>
+         </nav>
+      </div>
+	  <div id="navbar" class="menu_main">
+               <div class="menu_right">
+                  <div class="costum_menu">
+                     <ul>
+                        <li class="active"><a href="Negombo.html">Negombo</a></li>
+                        <li><a href="Mirissa.html">Mirissa</a></li>
+                        <li><a href="Trincomalee.html">Trincomalee</a></li>
+                        <li><a href="Gall.html">Galle</a></li>
+                        <li><a href="Benthota.html">Benthota</a></li>
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div>
+			<br>
+			<div id="navbar" class="menu_main">
+               <div class="menu_right">
+                  <div class="costum_menu">
+                     <ul>
+                        <li class="active"><a href="Negombo.html">Activity 01 </a></li>
+                        <li><a href="Negombo02.html">Activity 02</a></li>
+                        
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div><br><hr>
+			
+      <!-- header section start -->
+	  
+	  <!--gallery slider eka-->
+	  <center><h1>Dutch Canal, Negombo Lagoon, Muthrajawela Boat Tour</h1></center>
+	  
+<div id="slider">  
+<div class="slides">  
+  <img src="images/negombo/01.jpg" width="100%"/>
+ </div>
+  
+  <div class="slides">  
+  <img  src="images/negombo/02.jpg" width="100%" />
+</div>
+  
+  <div class="slides">  
+  <img src="images/negombo/03.jpg" width="100%" />
+</div> 
+  
+   <div class="slides">  
+  <img src="images/negombo/04.jpg" width="100%" />
+</div> 
+  
+<div class="slides">  
+  <img src="images/negombo/05.jpg" width="100%" />
+</div>  
+
+  
+  <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+ </div>
+	  
+	  <script type="text/javascript">
+	  
+	  var index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+  if(index<0){
+    index = slides.length-1;
+  }
+  
+  if(index>slides.length-1){
+    index = 0;
+  }
+  
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display = "none";
+    dot[i].classList.remove("active");
+  }
+  
+  slides[index].style.display= "block";
+  dot[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,2000);
+  
+}
+
+changeSlide();
+	  
+	  </script>
+	  
+	  
+	 <!--gallery slider eka-->
+	 <hr>
+	 <p>Explore different seaside attractions with a ride through the Dutch Canal, Negombo lagoon and Muthurajawela wetland. You will see the Negombo town and surrounding areas and witness the fishermen in the lagoon and do a memorable bird watching tour.</p>
+	  <hr><center>
+	  <h1><font color="red">Activity provider:</font><a href="https://www.getyourguide.com/beyond-escapes-s24675/">
+Beyond Escapes</a></h1><hr><br><br>
+
+	<h1>About this activity</h1>	<br>
+	<dl>
+		<dt><img src="images/negombo/icon01.png" width="50" height="50">Free cancellation</dt>
+			<dd>Cancel up to 24 hours in advance to receive a full refund</dd><br>
+		<dt><img src="images/negombo/icon02.png" width="50" height="50">Reserve now & pay later</dt>
+			<dd>Keep your travel plans flexible — book your spot and pay nothing today.</dd><br>
+		<dt><img src="images/negombo/icon03.png" width="100" height="100">Covid-19 precautions</dt>
+			<dd>Special health and safety measures are in place. Check your activity voucher once you book for full details.</dd><br>
+		<dt><img src="images/negombo/icon04.png" width="60" height="60">Duration 6 hours</dt>
+			<dd>Check availability to see starting times.</dd><br>
+		<dt><img src="images/negombo/icon05.png" width="50" height="50">Skip the ticket line</dt>
+			<dd></dd><br>
+		<dt><img src="images/negombo/icon06.png" width="100" height="100">Live tour guide</dt>
+			<dd>English</dd><br>
+		<dt><img src="images/negombo/icon07.png" width="50" height="50">Private group</dt>
+			<dd></dd><br>
+	</dl>
+		</center>
+		<hr><hr>
+		<center>
+		
+			<h2><font size="10" color="red">Highlights</h2>
+			
+		<p align="left"><font size="4" color="black">
+					◄Cruise down the Dutch Canal<br>
+					◄See the extensive mangrove swaps of Negombo Lagoon<br>
+					◄Enjoy bird watching in the Muthurajawela Wetlands<br>
+				</font></p>
+				
+	<h2><font size="10" color="red">Full description</h2>
+			
+		<p align="justify"><font size="4" color="black">
+					Start your memorable boat ride through the Dutch canal. This was at one time an important link in the transportation route which supplied the Dutch colonial administration.
+
+You will continue your ride through the Canal to the lagoon which is fed by a number of small rivers and a canal. It is linked to the sea by a narrow channel to the north, near Negombo city. It is surrounded by a densely populated region containing rice paddies, coconut plantations and grassland. The land is used for fishing and agriculture. The lagoon has extensive mangrove swamps and attracts a wide variety of water birds including cormorants, herons, egrets, gulls, terns and other shorebirds. 
+
+Finally, you will reach Muthurajawela Wetland that provides a home for a diverse range of flora and fauna, some of which are endemic and threatened. It is also an important area for migratory birds, making it a primary recreational and educational destination in Negombo. 
+				</font></p>
+<h2><font size="10" color="red">Includes</h2>
+			
+		<p align="justify"><font size="4" color="black">
+					◄Hotel pick-up and drop off<br>
+◄Private Boat with life jackets<br>
+◄English-speaking nature guide<br>
+◄Light refreshments during the boat ride<br></font></p>
+
+<h2><font size="10" color="red">Not suitable for</h2>
+			
+		<p align="justify"><font size="4" color="black">
+					◄Pregnant women<br>
+◄People with back problems<br>
+◄People with mobility impairments<br></font></p>
+<h2><font size="10" color="red">Important information</font></h2><br>
+</center>
+<pre>
+<p> <font size="4">What to bring :
+		◄Comfortable shoes<br>
+		◄Sunglasses<br>
+		◄Sun hat
+		</p>
+<p> <font size="4">Not allowed :
+		◄Pets<br>
+		◄Smoking<br>
+		◄Luggage or large bags<br>
+		◄Unaccompanied minors
+		</p>
+<p> <font size="4">Know before you go :<br>
+		◄Children must be accompanied by an adult
+		</p>
+	</pre>
+	
+	<center>Go For More Details →<a href="https://www.getyourguide.com/beyond-escapes-s24675/">Beyond Escapes</a></center>
+			
+	
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+	  
+	  
+	  
+      <!-- footer section start -->
+      <div class="footer_section layout_padding padding_top_90">
+         <div class="container">
+            <div class="social_icon">
+               <ul>
+                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+               </ul>
+            </div>
+         </div>
+         
+      </div>
+      <!-- footer section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         if ( $(window).width() > 990) { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 350,
+             loop:true,
+             margin:35,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+          }
+         
+         
+         
+          else { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 70,
+             loop:true,
+             margin:10,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+           }    
+         
+      </script>
+      <script type="text/javascript">
+         $(window).scroll(function(){
+         var sticky = $('#navbar'),
+         scroll = $(window).scrollTop();
+         
+         if (scroll >= 600) sticky.addClass('fix-nav');
+         else sticky.removeClass('fix-nav');
+         });
+      </script>
+   </body>
+</html>

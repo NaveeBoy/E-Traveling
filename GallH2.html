@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   
+   <!---slider eke css-->
+   <style>
+	 dl:after {content:"";display:table;clear:both;}
+.dd {
+    padding:.5em 0;
+}
+.dl {
+    width:100%;
+}
+.dt, dd {
+    display:inline-block;
+    width:30%;
+}
+.dt {
+    text-align:right;
+    font-weight:bold;
+    clear:left;
+    float:left;
+}
+.dd {
+    width:70%;
+    padding-left:1em;
+    clear:right;
+}
+.dd + dd {
+    float:right;
+    clear:both;
+}
+.dt:first-child {
+    padding-top:.5em;
+}
+.dd + dt {
+   clear:both;
+    padding-top:.5em;
+}
+.dt + dt {
+    width: 100%;
+    float: none;
+    padding: 0 70% 0 0;
+}
+.dt + dt + dd {
+    margin-top: -2em;
+}
+.dt + dt + dd + dt {
+    margin-top: 2em;
+}
+   
+   <!--dl-->
+   *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes fade{
+  from{
+    opacity:0.4;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+
+
+#slider{
+  margin:0 auto;
+  width:80%;
+  overflow:hidden;
+}
+
+.slides{
+  overflow:hidden;
+  animation-name:fade;
+  animation-duration:1s;
+  display:none;
+}
+
+@media (max-width:567px){
+  #slider{
+    width:100%;
+
+  }
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+th {
+  background-color: #4287f5;
+  color: white;
+}
+
+th,
+td {
+  width: 150px;
+  text-align: center;
+  border: px solid black;
+  padding: 50px;
+ color: Blue;
+}
+
+   </style>
+   
+   
+   
+   <!---slider eke css->
+   
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>GallH2</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section header_bg">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="logo" href="Homepage.html"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="Homepage.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="Map.html">MAP</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="activities.html">ACTIVITES</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="nav-link" href="food&drink.html">FOOD & DRINKS</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contactInformation.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="main">
+               <form class="form-inline my-2 my-lg-0">
+                  <div class="call_text">
+                     <ul>
+                        <li><a href="#"><img src="images/call-icon.png"><span class="padding_left_10">+94768322692</span></a></li>
+                        <li><a href="#"><img src="images/mail-icon.png"><span class="padding_left_10">etraveling@gmail.com</span></a></li>
+                        
+                     </ul>
+                  </div>
+               </form>
+            </div>
+         </nav>
+      </div>
+	  <div id="navbar" class="menu_main">
+               <div class="menu_right">
+                  <div class="costum_menu">
+                     <ul>
+                        <li ><a href="NegomboH1.html">Negombo</a></li>
+                        <li ><a href="MirissaH1.html">Mirissa</a></li>
+                        <li ><a href="TrincomaleeH1.html">Trincomalee</a></li>
+                        <li class="active"><a href="GallH1.html">Galle</a></li>
+                        <li><a href="BenthotaH1.html">Benthota</a></li>
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div>
+			<br>
+			<div id="navbar" class="menu_main">
+               <div class="menu_right">
+                  <div class="costum_menu">
+                     <ul>
+                        <li  ><a href="GallH1.html">01 </a></li>
+                        <li class="active"><a href="GallH2.html">02</a></li>
+						<li><a href="GallH3.html">03</a></li>
+						<li><a href="GallH4.html">04</a></li>
+						<li ><a href="GallH5.html">05</a></li>
+                        
+                        
+                     </ul>
+                  </div>
+               </div>
+            </div><br><hr>
+			
+      <!-- header section start -->
+	 
+</script>
+
+<!--gallery slider eka-->
+	  <center><h1>Villa White Queen</h1></center>
+	  
+<div id="slider">  
+<div class="slides">  
+  <img src="images/gallH/H2/01.jpg" width="100%"/>
+ </div>
+  
+  <div class="slides">  
+  <img  src="images/gallH/H2/02.jpg" width="100%" />
+</div>
+  
+  <div class="slides">  
+  <img src="images/gallH/H2/03.jpg" width="100%" />
+</div> 
+  
+   <div class="slides">  
+  <img src="images/gallH/H2/04.jpg" width="100%" />
+</div> 
+  
+<div class="slides">  
+  <img src="images/gallH/H2/05.jpg" width="100%" />
+</div>  
+
+  
+  <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+ </div>
+	  
+	  <script type="text/javascript">
+	  
+	  var index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+  if(index<0){
+    index = slides.length-1;
+  }
+  
+  if(index>slides.length-1){
+    index = 0;
+  }
+  
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display = "none";
+    dot[i].classList.remove("active");
+  }
+  
+  slides[index].style.display= "block";
+  dot[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,2000);
+  
+}
+
+changeSlide();
+	  
+	  </script>
+	  
+	  
+	 <!--gallery slider eka-->
+	 
+	 <p>Villa White Queen is a modern 2-storey property offering rooms with garden views. Guests enjoy free Wi-Fi in its common areas and free parking is available.
+
+Located in Galle, Villa White Queen is 2 km from Galle International Cricket Stadium and 3 km from Galle Harbour and Galle Fort National Museum. Unawatuna Beach is a 10-minute drive away while it takes 15 minutes by car to reach Galle Fort.
+
+The air-conditioned rooms feature a sofa and terrace with garden views. Private bathroom includes a shower and toilet.
+
+A 24-hour front desk, shared lounge and a tour desk are available.
+
+Food is served on request at the villa’s dining area.
+
+Couples particularly like the location — they rated it 8.6 for a two-person trip.</p><br>
+
+<center><h1>Facilities of Villa White Queen</h1></center>
+<br>
+<h3>Most popular facilities</h3>
+<table border="0" align="center" width="100%">
+<tr align="center" >
+	<td>  1 swimming pool</td>
+	<td>   Fitness centre</td>
+	<td>  Non-smoking rooms</td>
+	<td>  Room service</td>
+	<td>  Facilities for disabled guests</td>
+	<td>  WiFi available in all areas</td>
+</tr>
+<tr align="center" >
+	
+	<td>  Restaurant</td>
+	<td>  Pets allowed</td>
+	<td>   Bar</td>
+	<td>   Very good breakfast</td>
+</tr>
+</table><br><br>
+
+
+
+
+
+
+
+
+<center><h1>Location</h1></center>
+<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.6319789278928!2d80.21768384985081!3d6.045126195600575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173c7ceaee0df%3A0x20639e674fe89e77!2sVilla%20White%20Queen!5e0!3m2!1sen!2slk!4v1667053547480!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</center>
+<br><br>
+<center>
+<a href="https://www.booking.com/hotel/lk/villa-white-queen.en-gb.html?label=VR-SR-DL-desktop-c200-f6761189-dd9a-dfae-0174-e6b4e1c555d0&sid=61cef4a31bb660e55c9b555374f3c43f&aid=1430043&ucfs=1&arphpl=1&checkin=2022-10-30&checkout=2022-10-31&dest_id=-2217578&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=2&hapos=2&sr_order=popularity&srpvid=87686357260f027c&srepoch=1667052464&all_sr_blocks=84813603_95709712_2_2_0&highlighted_blocks=84813603_95709712_2_2_0&matching_block_id=84813603_95709712_2_2_0&sr_pri_blocks=84813603_95709712_2_2_0__3825&from_beach_sr=1&beach_sr_walking_distance=1535&from_sustainable_property_sr=1&from=searchresults&activeTab=main">
+<img src="images/bookNow.jpg" width="250px"></a>
+  </center>  
+	  
+	 
+	  
+      <!-- footer section start -->
+      <div class="footer_section layout_padding padding_top_90">
+         <div class="container">
+            <div class="social_icon">
+               <ul>
+                  <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                  <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                  <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                  <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+               </ul>
+            </div>
+         </div>
+         
+      </div>
+      <!-- footer section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script>
+         if ( $(window).width() > 990) { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 350,
+             loop:true,
+             margin:35,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+          }
+         
+         
+         
+          else { 
+         
+          $('.owl-carousel').owlCarousel({
+             stagePadding: 70,
+             loop:true,
+             margin:10,
+             nav:true,
+             responsive:{
+                 0:{
+                     items:1
+                 },
+                 600:{
+                     items:1
+                 },
+                 1000:{
+                     items:1
+                 }
+             }
+         })
+         
+           }    
+         
+      </script>
+      <script type="text/javascript">
+         $(window).scroll(function(){
+         var sticky = $('#navbar'),
+         scroll = $(window).scrollTop();
+         
+         if (scroll >= 600) sticky.addClass('fix-nav');
+         else sticky.removeClass('fix-nav');
+         });
+      </script>
+   </body>
+</html>
